@@ -4,7 +4,7 @@
     <meta>
       <module>github.com/pablo-botella/quevu-pipe</module>
       <license>MIT</license>
-      <description>An input of quevu for Go: reads what a program writes to its standard output, through a pipe (an open stream, a named pipe on Windows, a FIFO elsewhere), and feeds it to a log so it follows the normal way to the consumers. Use when working with github.com/pablo-botella/quevu-pipe (package qpipe) or when the output of another program has to enter a quevu log.</description>
+      <description>An input of quevu for Go: reads what a program writes to its standard output, through a pipe (an open stream, a named pipe on Windows, a FIFO elsewhere), and feeds it to a log so it follows the normal way to the writers. Use when working with github.com/pablo-botella/quevu-pipe (package qpipe) or when the output of another program has to enter a quevu log.</description>
     </meta>
   </project>
 </mkskill>

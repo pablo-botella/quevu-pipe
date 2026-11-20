@@ -1,6 +1,6 @@
 // Package qpipe is an input of quevu: it reads what a program writes to
 // its standard output, through a pipe, and feeds it to a log, so the data
-// follows the normal way from there to the consumers.
+// follows the normal way from there to the writers.
 //
 // It sits at the input end and does one thing: read a stream and hand it
 // over. It does not launch programs, does not look at standard error and

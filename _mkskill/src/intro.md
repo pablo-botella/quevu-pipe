@@ -9,7 +9,7 @@ mkskill:
 An input of [quevu](https://github.com/pablo-botella/quevu-kernel): it reads what
 a program writes to its standard output, through a pipe, and feeds it to a
 log. From there the data follows the normal way: the log sends it to its
-consumers.
+writers.
 
 ```go
 // A named endpoint that programs write to...

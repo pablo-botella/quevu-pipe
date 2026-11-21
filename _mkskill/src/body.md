@@ -27,7 +27,7 @@ A pipe is whatever each system calls one.
   endpoint exists only while the source is running.
 
 `log` is anything that takes a stream of text and makes chunks of its
-lines: a `qhub.Hub`.
+lines: a `quevu.QHub`.
 
 ## As a unit
 

@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pablo-botella/quevu"
+	"github.com/pablo-botella/quevu/qkernel"
 )
 
 // intake stands for a log: it keeps what it is given.
@@ -47,8 +47,8 @@ func (i *intake) waitFor(t *testing.T, want string) {
 	}
 }
 
-var _ quevu.Unit = (*Source)(nil)
-var _ quevu.Exiter = (*Source)(nil)
+var _ qkernel.Unit = (*Source)(nil)
+var _ qkernel.Exiter = (*Source)(nil)
 
 func TestAStreamReachesTheLogAndEndsByItself(t *testing.T) {
 	r, w := io.Pipe()
@@ -151,7 +151,7 @@ func TestALogThatRefusesIsAFailure(t *testing.T) {
 func TestInAPanelItIsAUnitLikeAnyOther(t *testing.T) {
 	r, w := io.Pipe()
 	var log intake
-	p := quevu.New()
+	p := qkernel.New()
 	p.Add("program", From(r, &log))
 	if err := p.StartAll(context.Background()); err != nil {
 		t.Fatal(err)
@@ -161,7 +161,7 @@ func TestInAPanelItIsAUnitLikeAnyOther(t *testing.T) {
 	w.Close()
 	// The program ended: the panel shows its input as stopped.
 	deadline := time.Now().Add(3 * time.Second)
-	for p.Units()[0].State != quevu.Stopped {
+	for p.Units()[0].State != qkernel.Stopped {
 		if time.Now().After(deadline) {
 			t.Fatalf("state %v", p.Units()[0].State)
 		}

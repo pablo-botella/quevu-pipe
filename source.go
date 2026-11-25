@@ -16,7 +16,7 @@
 //     on Windows, a FIFO elsewhere. A program reaches it by redirecting
 //     its standard output there.
 //
-// Either one is a quevu.Unit, so it is started and stopped with the rest
+// Either one is a qkernel.Unit, so it is started and stopped with the rest
 // of the application, and it ends by itself when its stream does.
 package qpipe
 
@@ -32,7 +32,7 @@ import (
 )
 
 // Source reads a stream and feeds it to a log. "Source" is a working
-// name: the piece is an input, and has nothing to do with quevu.Source,
+// name: the piece is an input, and has nothing to do with qkernel.Source,
 // which is what a console shows.
 type Source struct {
 	into io.Writer

@@ -8,7 +8,7 @@ mkskill:
 
 Go package `github.com/pablo-botella/quevu-pipe`, imported as `qpipe`: an
 input that reads a stream and writes it to a log. One public type,
-`qpipe.Source` (a `quevu.Unit` and `quevu.Exiter`), from `From` or
+`qpipe.Source` (a `qkernel.Unit` and `qkernel.Exiter`), from `From` or
 `Listen`. Depends on `quevu` for the contracts used in tests and, on
 Windows, on `github.com/Microsoft/go-winio`.
 

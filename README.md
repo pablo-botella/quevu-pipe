@@ -32,7 +32,7 @@ a log. It is not a provider: nothing can be asked of it. It does not
 launch programs, does not look at standard error and writes nothing back.
 
 "Source" is a working name for the piece. It has nothing to do with
-`quevu.Source`, which is what a console shows.
+`qkernel.Source`, which is what a console shows.
 
 ## Getting the pipe
 
@@ -48,11 +48,11 @@ A pipe is whatever each system calls one.
   endpoint exists only while the source is running.
 
 `log` is anything that takes a stream of text and makes chunks of its
-lines: a `quevu.QHub`.
+lines: a `qkernel.QHub`.
 
 ## As a unit
 
-A source is a `quevu.Unit`, so it starts and stops with the rest of the
+A source is a `qkernel.Unit`, so it starts and stops with the rest of the
 application, in a panel:
 
 - `Start` returns at once; reading goes on in the background.
